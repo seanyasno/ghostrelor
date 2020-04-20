@@ -1,7 +1,7 @@
-import {TodoItem, TodoDatabase} from "./models/index.js";
-import {todoItemView, todosView} from "./views/index.js";
+import {TodoItem, TodoDatabase, updateTodosView} from "./models/index.js";
+import {todoItemView} from "./views/index.js";
 
-let todoDatabase = new TodoDatabase(todosView);
+let todoDatabase = new TodoDatabase(updateTodosView);
 
 let item0 = new TodoItem('Buy milk');
 let item1 = new TodoItem('Trade elephants', true);
