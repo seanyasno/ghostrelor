@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,10 @@
   },
   "homepage": "https://github.com/seanyasno/ghostrelor#readme",
   "devDependencies": {
+    "@types/uuid": "^7.0.2",
     "eslint": "^6.8.0",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.3"
-  }
+  },
+  "dependencies": {}
 }

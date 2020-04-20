@@ -16,8 +16,8 @@ export default class TodoDatabase {
       this.addTodoEvent(...args);
   }
 
-  removeTodo(todoIndex, ...args) {
-    this.todos = this.todos.filter((todo, index) => index === todoIndex);
+  removeTodo(todoId, ...args) {
+    this.todos = this.todos.filter(todo => todo.id !== todoId);
     if (this.removeTodoEvent)
       this.removeTodoEvent(...args);
   }
