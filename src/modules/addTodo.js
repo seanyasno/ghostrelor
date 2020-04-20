@@ -1,10 +1,10 @@
-import {TodoItem} from "./index.js";
-import {todoItemView} from "../views/index.js";
+import {TodoItem} from "../models";
+import {todoItemView} from "../views";
 
 export default function addTodo(todoDatabase, initTodoView) {
-  let description = document.getElementById('todo-input').value;
+  const description = document.getElementById('todo-input').value;
   if (description) {
-    let todoItem = new TodoItem(description);
+    const todoItem = new TodoItem(description);
     todoDatabase.addTodo(todoItem, todoItemView(todoItem));
     document.getElementById('todo-input').value = '';
     initTodoView(todoDatabase);

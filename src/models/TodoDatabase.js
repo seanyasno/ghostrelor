@@ -10,21 +10,21 @@ export default class TodoDatabase {
     this.checkTodoEvent = checkTodoEvent;
   }
 
-  addTodo(todoItem, ...args) {
+  addTodo(todoItem, todoItemView) {
     this.todos.push(todoItem);
     if (this.addTodoEvent)
-      this.addTodoEvent(...args);
+      this.addTodoEvent(todoItemView);
   }
 
-  removeTodo(todoId, ...args) {
+  removeTodo(todoId, todoItemView) {
     this.todos = this.todos.filter(todo => todo.id !== todoId);
     if (this.removeTodoEvent)
-      this.removeTodoEvent(...args);
+      this.removeTodoEvent(todoItemView);
   }
 
-  checkTodo(todoIndex, ...args) {
+  checkTodo(todoIndex, todoItemView) {
     this.todos = this.todos.map((todo, index) => index === todoIndex ? todo.done = !todo.done : '');
     if (this.checkTodoEvent)
-      this.checkTodoEvent(...args);
+      this.checkTodoEvent(todoItemView);
   }
 }

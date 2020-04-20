@@ -14,6 +14,17 @@ body {
 #todos > div {
     display: flex;
     align-items: center;
+    width: 40vmin;
+    justify-content: space-between;
+}
+
+#todos > div > div {
+    display: flex;
+    align-items: center;
+}
+
+.check-todo {
+    
 }
 
 .remove-todo {

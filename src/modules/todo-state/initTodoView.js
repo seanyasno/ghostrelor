@@ -1,4 +1,4 @@
-import {removeTodo, checkTodo} from "./todo-actions/index.js";
+import {removeTodo, checkTodo} from "../todo-actions";
 
 export default function initTodoView(todoDatabase) {
   removeTodo(todoDatabase);
