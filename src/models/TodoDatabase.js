@@ -6,7 +6,10 @@ export default class TodoDatabase {
   }
 
   remove(todoId) {
-    this.todos = this.todos.filter(todo => todo.id !== todoId);
+    const index = this.todos.findIndex(todo => todo.id === todoId);
+    if (index !== -1) {
+      this.todos.splice(index, 1);
+    }
   }
 
   checkTodo(todoIndex) {
