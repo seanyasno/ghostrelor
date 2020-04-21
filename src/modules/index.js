@@ -1,5 +1,9 @@
-import addTodo from './addTodo.js';
+import addTodoItem from './addTodoItem.js';
+import addItemToListView from './addItemToListView.js';
+import updateItemsView from './updateItemsView.js';
 
 export {
-  addTodo
+  addTodoItem,
+  addItemToListView,
+  updateItemsView
 }

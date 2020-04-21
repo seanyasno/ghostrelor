@@ -1,24 +1,28 @@
 import {TodoItem} from '../models';
 import {todoItemView} from '../views';
 import {addTodoToLocalStorage} from './local-storage/index.js';
+import {addItemToListView, updateItemsView} from './index.js';
 
-// addTodoItem
-export default function addTodo(todoDatabase, initTodoView, addLocal = false, description = '', done = false, id = '') {
+export default function addTodoItem(todoDatabase, initTodoEvents, addLocal = false, description = '', done = false, id = '') {
   if (!description) {
     description = document.getElementById('todo-input').value;
   }
 
   if (description) {
     let todoItem;
-    if (id)
+    if (id) {
       todoItem = new TodoItem(description, done, id);
-    else
+    } else {
       todoItem = new TodoItem(description);
+    }
 
-    todoDatabase.addTodo(todoItem, todoItemView(todoItem));
+    todoDatabase.add(todoItem);
+    addItemToListView(todoItemView(todoItem));
+    updateItemsView(todoDatabase);
+    initTodoEvents(todoDatabase);
     document.getElementById('todo-input').value = '';
-    initTodoView(todoDatabase);
-    if (addLocal)
+    if (addLocal) {
       addTodoToLocalStorage(todoItem);
+    }
   }
 }

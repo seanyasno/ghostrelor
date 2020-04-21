@@ -1,4 +1,4 @@
-import {addTodo} from '../index.js';
+import {addTodoItem} from '../index.js';
 
 export default function loadTodosFromLocalStorage(todoDatabase, initTodoView) {
   if (!localStorage.todos)
@@ -6,6 +6,6 @@ export default function loadTodosFromLocalStorage(todoDatabase, initTodoView) {
 
   const todos = JSON.parse(localStorage.todos);
   for (let i = 0; i < todos.length; i++) {
-    addTodo(todoDatabase, initTodoView, false, todos[i].description, todos[i].done, todos[i].id);
+    addTodoItem(todoDatabase, initTodoView, false, todos[i].description, todos[i].done, todos[i].id);
   }
 }

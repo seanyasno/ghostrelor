@@ -1,4 +1,4 @@
-import {addRemoveEventListener, addCheckEventListener} from '../todo-events';
+import {addRemoveEventListener, addCheckEventListener} from './index.js';
 
 export default function initTodoEvents(todoDatabase) {
   addRemoveEventListener(todoDatabase);

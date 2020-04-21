@@ -3,7 +3,7 @@ import {removeTodoFromLocalStorage} from '../local-storage/index.js';
 
 export default function addRemoveEventListener(todoDatabase) {
   addEventListenerToItem((todoId) => {
-    todoDatabase.removeTodo(Number(todoId));
+    todoDatabase.remove(Number(todoId));
     removeTodoFromLocalStorage(todoId);
     document.getElementById(`todo-item-${todoId}`).remove();
   }, 'remove-item-');
