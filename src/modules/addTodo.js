@@ -1,7 +1,8 @@
-import {TodoItem} from "../models";
-import {todoItemView} from "../views";
-import {addTodoToLocalStorage} from "./local-storage/index.js";
+import {TodoItem} from '../models';
+import {todoItemView} from '../views';
+import {addTodoToLocalStorage} from './local-storage/index.js';
 
+// addTodoItem
 export default function addTodo(todoDatabase, initTodoView, addLocal = false, description = '', done = false, id = '') {
   if (!description) {
     description = document.getElementById('todo-input').value;

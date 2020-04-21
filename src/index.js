@@ -1,5 +1,7 @@
-import {TodoDatabase, updateTodosView, addTodo, initTodoView} from './models/index.js';
+import {TodoDatabase} from './models/index.js';
+import {initTodoView, updateTodosView} from './modules/todo-state/index.js';
 import {loadTodosFromLocalStorage} from './modules/local-storage/index.js';
+import {addTodo} from './modules/index.js';
 
 const ENTER_KEY_CODE = 13;
 const todoDatabase = new TodoDatabase(updateTodosView);

@@ -1,6 +1,6 @@
-import {removeTodo, checkTodo} from "../todo-actions";
+import {addRemoveEventListener, addCheckEventListener} from '../todo-actions';
 
 export default function initTodoView(todoDatabase) {
-  removeTodo(todoDatabase);
-  checkTodo(todoDatabase)
+  addRemoveEventListener(todoDatabase);
+  addCheckEventListener(todoDatabase)
 }

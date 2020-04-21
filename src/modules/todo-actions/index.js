@@ -1,7 +1,7 @@
-import removeTodo from "./removeTodo.js";
-import checkTodo from "./checkTodo.js";
+import addRemoveEventListener from './addRemoveEventListener.js';
+import addCheckEventListener from './addCheckEventListener.js';
 
 export {
-  removeTodo,
-  checkTodo
+  addRemoveEventListener,
+  addCheckEventListener
 }
