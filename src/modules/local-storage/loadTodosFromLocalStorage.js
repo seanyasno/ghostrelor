@@ -1,4 +1,4 @@
-import {addTodoItem} from '../index.js';
+import {addTodoItem, sortItemsView} from '../index.js';
 
 export default function loadTodosFromLocalStorage(todoDatabase, initTodoView) {
   if (!localStorage.todos)
@@ -8,4 +8,6 @@ export default function loadTodosFromLocalStorage(todoDatabase, initTodoView) {
   for (let i = 0; i < todos.length; i++) {
     addTodoItem(todoDatabase, initTodoView, false, todos[i].description, todos[i].done, todos[i].id);
   }
+
+  sortItemsView(todoDatabase);
 }

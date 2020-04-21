@@ -1,7 +1,7 @@
 import {TodoItem} from '../models';
 import {todoItemView} from '../views';
 import {addTodoToLocalStorage} from './local-storage/index.js';
-import {addItemToListView, updateItemsView} from './index.js';
+import {addItemToListView, sortItemsView} from './index.js';
 
 export default function addTodoItem(todoDatabase, initTodoEvents, addLocal = false, description = '', done = false, id = '') {
   if (!description) {
@@ -18,8 +18,7 @@ export default function addTodoItem(todoDatabase, initTodoEvents, addLocal = fal
 
     todoDatabase.add(todoItem);
     addItemToListView(todoItemView(todoItem));
-    updateItemsView(todoDatabase);
-    initTodoEvents(todoDatabase);
+    sortItemsView(todoDatabase);
     document.getElementById('todo-input').value = '';
     if (addLocal) {
       addTodoToLocalStorage(todoItem);
