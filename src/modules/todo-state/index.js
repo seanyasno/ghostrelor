@@ -1,7 +1,7 @@
-import initTodoView from './initTodoView.js';
-import updateTodosView from './updateTodosView.js';
+import initTodoEvents from './initTodoEvents.js';
+import addItemToListView from './addItemToListView.js';
 
 export {
-  initTodoView,
-  updateTodosView
+  initTodoEvents,
+  addItemToListView
 }
