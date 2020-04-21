@@ -1,0 +1,26 @@
+{
+  "name": "ghostrelor",
+  "version": "1.0.0",
+  "description": "Crazy todo list website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanyasno/ghostrelor.git"
+  },
+  "keywords": [],
+  "author": "Sean Yasnogorodski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seanyasno/ghostrelor/issues"
+  },
+  "homepage": "https://github.com/seanyasno/ghostrelor#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "dependencies": {}
+}

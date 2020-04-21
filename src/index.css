@@ -1,0 +1,38 @@
+body {
+    background-color: #808080;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+#todos > div {
+    display: flex;
+    align-items: center;
+    width: 40vmin;
+    justify-content: space-between;
+}
+
+#todos > div > div {
+    display: flex;
+    align-items: center;
+}
+
+.check-todo {
+    
+}
+
+.remove-todo {
+    background-color: #ff6f69;
+    border-style: none;
+    border-radius: 5em;
+    padding: 0.8em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6em;
+}
