@@ -1,5 +1,9 @@
-import addTodo from "./addTodo.js";
+import sortItemsView from './sortItemsView.js';
+import updateItemsView from './updateItemsView.js';
+import activateEditTodoItem from './activateEditTodoItem.js';
 
 export {
-  addTodo
+  sortItemsView,
+  updateItemsView,
+  activateEditTodoItem
 }

@@ -1,30 +1,23 @@
 export default class TodoDatabase {
   todos = [];
 
-  constructor(addTodoEvent = () => {
-  }, removeTodoEvent = () => {
-  }, checkTodoEvent = () => {
-  }) {
-    this.addTodoEvent = addTodoEvent;
-    this.removeTodoEvent = removeTodoEvent;
-    this.checkTodoEvent = checkTodoEvent;
-  }
-
-  addTodo(todoItem, todoItemView) {
+  add(todoItem) {
     this.todos.push(todoItem);
-    if (this.addTodoEvent)
-      this.addTodoEvent(todoItemView);
   }
 
-  removeTodo(todoId, todoItemView) {
-    this.todos = this.todos.filter(todo => todo.id !== todoId);
-    if (this.removeTodoEvent)
-      this.removeTodoEvent(todoItemView);
+  remove(todoId) {
+    const index = this.todos.findIndex(todo => todo.id === todoId);
+    if (index !== -1) {
+      this.todos.splice(index, 1);
+    }
   }
 
-  checkTodo(todoIndex, todoItemView) {
-    this.todos = this.todos.map((todo, index) => index === todoIndex ? todo.done = !todo.done : '');
-    if (this.checkTodoEvent)
-      this.checkTodoEvent(todoItemView);
+  checkTodo(todoIndex) {
+    this.todos[todoIndex].done = !this.todos[todoIndex].done;
+  }
+
+  sort() {
+    this.todos.sort((x, y) => x.done === y.done ? 0 : x.done ? -1 : 1);
+    this.todos.reverse();
   }
 }

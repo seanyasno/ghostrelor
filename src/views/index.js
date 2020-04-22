@@ -1,4 +1,4 @@
-import todoItemView from "./todoItemView.js";
+import todoItemView from './todoItemView.js';
 
 export {
   todoItemView,
