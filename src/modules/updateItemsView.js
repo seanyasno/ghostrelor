@@ -1,4 +1,4 @@
-import {addItemToListView} from './index.js';
+import {addItemToListView} from './item-actions/index.js';
 import {todoItemView} from '../views/index.js';
 
 export default function updateItemsView(todoDatabase) {

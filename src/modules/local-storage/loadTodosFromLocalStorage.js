@@ -1,4 +1,5 @@
-import {addTodoItem, sortItemsView} from '../index.js';
+import {sortItemsView} from '../index.js';
+import {addTodoItem} from '../item-actions/index.js';
 
 export default function loadTodosFromLocalStorage(todoDatabase, initTodoView) {
   if (!localStorage.todos)

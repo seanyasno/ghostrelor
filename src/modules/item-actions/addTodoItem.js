@@ -1,7 +1,8 @@
-import {TodoItem} from '../models';
-import {todoItemView} from '../views';
-import {addTodoToLocalStorage} from './local-storage/index.js';
-import {addItemToListView, sortItemsView} from './index.js';
+import {TodoItem} from '../../models';
+import {todoItemView} from '../../views';
+import {addTodoToLocalStorage} from '../local-storage';
+import {sortItemsView} from '../index.js';
+import {addItemToListView} from './index.js';
 
 export default function addTodoItem(todoDatabase, initTodoEvents, addLocal = false, description = '', done = false, id = '') {
   if (!description) {
