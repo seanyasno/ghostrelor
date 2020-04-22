@@ -1,10 +1,13 @@
 import initTodoEvents from './initTodoEvents.js';
-import addCheckEventListener from './addCheckEventListener.js'
-import addRemoveEventListener from './addRemoveEventListener.js';
 import addEventListenerToItem from './addEventListenerToItem.js';
-import addMouseOverEventListener from './addMouseOverEventListener.js';
-import addMouseLeaveEventListener from './addMouseLeaveEventListener.js';
-import addEditContentEventListener from './addEditContentEventListener.js';
+import addDropEventListener from './drag-and-drop/addDropEventListener.js';
+import addCheckEventListener from './button-actions/addCheckEventListener.js'
+import addRemoveEventListener from './button-actions/addRemoveEventListener.js';
+import addDragOverEventListener from './drag-and-drop/addDragOverEventListener.js';
+import addMouseOverEventListener from './edit-content/addMouseOverEventListener.js';
+import addDragStartEventListener from './drag-and-drop/addDragStartEventListener.js';
+import addMouseLeaveEventListener from './edit-content/addMouseLeaveEventListener.js';
+import addEditContentEventListener from './edit-content/addEditContentEventListener.js';
 
 export {
   initTodoEvents,
@@ -13,5 +16,8 @@ export {
   addEventListenerToItem,
   addMouseOverEventListener,
   addMouseLeaveEventListener,
-  addEditContentEventListener
+  addEditContentEventListener,
+  addDropEventListener,
+  addDragOverEventListener,
+  addDragStartEventListener
 }

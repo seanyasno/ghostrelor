@@ -3,7 +3,10 @@ import {
   addCheckEventListener,
   addEditContentEventListener,
   addMouseOverEventListener,
-  addMouseLeaveEventListener
+  addMouseLeaveEventListener,
+  addDropEventListener,
+  addDragOverEventListener,
+  addDragStartEventListener
 } from './index.js';
 
 export default function initTodoEvents(todoDatabase) {
@@ -12,4 +15,7 @@ export default function initTodoEvents(todoDatabase) {
   addEditContentEventListener(todoDatabase);
   addMouseOverEventListener();
   addMouseLeaveEventListener();
+  addDropEventListener(todoDatabase);
+  addDragOverEventListener();
+  addDragStartEventListener();
 }

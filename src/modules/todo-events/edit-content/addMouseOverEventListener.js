@@ -1,4 +1,4 @@
-import {addEventListenerToItem} from './index.js';
+import {addEventListenerToItem} from '../index.js';
 
 export default function addMouseOverEventListener() {
   addEventListenerToItem((todoId) => {
