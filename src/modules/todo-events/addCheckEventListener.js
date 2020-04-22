@@ -1,6 +1,6 @@
+import {sortItemsView} from '../index.js';
 import {addEventListenerToItem} from './index.js';
 import {checkTodoToLocalStorage} from '../local-storage/index.js';
-import {sortItemsView} from '../index.js';
 
 export default function addCheckEventListener(todoDatabase) {
   addEventListenerToItem((todoId) => {

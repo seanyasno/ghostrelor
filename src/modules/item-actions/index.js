@@ -1,11 +1,11 @@
-import addItemToListView from './addItemToListView.js';
 import addTodoItem from './addTodoItem.js';
 import removeAllItems from './removeAllItems.js';
-import removeAllCheckedItems from './reomoveAllCheckedItems.js';
+import addItemToListView from './addItemToListView.js';
+import removeAllCheckedItems from './removeAllCheckedItems.js';
 
 export {
-  addItemToListView,
   addTodoItem,
   removeAllItems,
+  addItemToListView,
   removeAllCheckedItems
 }

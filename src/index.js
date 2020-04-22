@@ -1,8 +1,8 @@
 import {TodoDatabase} from './models/index.js';
-import {loadTodosFromLocalStorage} from './modules/local-storage/index.js';
-import {addTodoItem, removeAllCheckedItems, removeAllItems} from './modules/item-actions/index.js';
 import {initTodoEvents} from './modules/todo-events/index.js';
 import {activateEditTodoItem} from './modules/index.js';
+import {loadTodosFromLocalStorage} from './modules/local-storage/index.js';
+import {addTodoItem, removeAllCheckedItems, removeAllItems} from './modules/item-actions/index.js';
 
 const ENTER_KEY_CODE = 13;
 const todoDatabase = new TodoDatabase();

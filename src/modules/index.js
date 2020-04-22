@@ -1,9 +1,9 @@
-import updateItemsView from './updateItemsView.js';
 import sortItemsView from './sortItemsView.js';
+import updateItemsView from './updateItemsView.js';
 import activateEditTodoItem from './activateEditTodoItem.js';
 
 export {
-  updateItemsView,
   sortItemsView,
+  updateItemsView,
   activateEditTodoItem
 }

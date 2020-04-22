@@ -1,5 +1,5 @@
-import {addItemToListView} from './item-actions/index.js';
 import {todoItemView} from '../views/index.js';
+import {addItemToListView} from './item-actions/index.js';
 
 export default function updateItemsView(todoDatabase) {
   todoDatabase.todos.map(todo => document.getElementById(`todo-item-check-${todo.id}`).checked = todo.done);
