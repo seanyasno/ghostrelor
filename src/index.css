@@ -31,13 +31,18 @@ body {
     align-items: center;
 }
 
-.remove-todo {
+.remove-todo, .edit-todo {
     border-style: none;
     border-radius: 5em;
     padding: 1.6em;
     color: white;
     font-weight: bold;
     background: #ff6f69 url("img/delete-white-18dp.svg") no-repeat center;
+}
+
+.edit-todo {
+    margin: 0 0.5em;
+    background: #96ceb4 url("img/create-white-18dp.svg") no-repeat center;
 }
 
 .remove-buttons {

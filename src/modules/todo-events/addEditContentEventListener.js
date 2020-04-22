@@ -8,4 +8,7 @@ export default function addEditContentEventListener(todoDatabase) {
       document.getElementById(elementId + todoId).textContent = todoDatabase.todos[todoIndex].description;
     }
   }, elementId, 'blur');
+  addEventListenerToItem((todoId) => {
+    document.getElementById(elementId+todoId).focus();
+  }, 'edit-item-');
 }
