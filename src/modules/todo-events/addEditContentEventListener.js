@@ -7,8 +7,11 @@ export default function addEditContentEventListener(todoDatabase) {
     if (todoIndex !== -1) {
       document.getElementById(elementId + todoId).textContent = todoDatabase.todos[todoIndex].description;
     }
+
+    document.getElementById(`description-item-${todoId}`).setAttribute('contenteditable', 'false');
   }, elementId, 'blur');
   addEventListenerToItem((todoId) => {
+    document.getElementById(`description-item-${todoId}`).setAttribute('contenteditable', 'true');
     document.getElementById(elementId+todoId).focus();
   }, 'edit-item-');
 }
